@@ -180,15 +180,95 @@
     - Java에선 Getter메서드/Setter메서드로 사용 
 
 ## 2일차 
+- TIP, C#에서 빌드시 오류 프로세스 액세스 오류
+    - 빌드하고자는 프로그램이 백그라운드 상에 실행중이기 때문
+    - Ctrl + Shift + ESC(작업관리자)에서 해당 프로세스 작업 끝내기 후
+    - 재빌드
 - 컬렉션(배열, 리스트, 인덱서)
+    - 모든 배열은 System.Array 클래스를 상속한 하위 클래스
+    - 기본적인 배열의 사용법, Python 리스트와도 동일
+    - 배열 분할 - C# 8.0부터. 파이썬의 배열 슬라이스를 도입(잘만든 기능)
+    - 컬렉션, 파이썬이 리스트, 스택, 큐, 딕셔너리와 동일
+        - ArrayList
+        - Stack, Queue
+        - Hashtable(== Dictionary)
+    - foreach를 사용할 수 있는 객체로 만들기 - yield
 - 일반화(Generic) 프로그래밍
+    - 파이썬 -변수에 제약사항 없음
+    - 타입의 제약을 해소하고자 만든 기능. ArrayList 등이 해결(단, 박싱(언방식)등 성능의 문제가 있음)
+    - 하나의 메서드로 여러 타입의 처리를 해줄 수 있는 프로그래밍 방식
+    - 일반화 컬렉션
+        - List
+        - Stack, Queue
+        - Dictionary<TKey, TValue>
 - 예외처리
-- 대리자와 이벤트 
-- 람다식 
-- 애트리뷰트
-- dynamic 형식
-- Winform (파일, 스레드)
-- 가비지 컬렉션
-- 네트워크 프로그래밍
+    - 소스코드 상 문법적 오류 - 오류(Error)
+    - 실행 중 생기는 오류 - 예외(Exception)
+    ```C#
+    try {
+        // ... 예외가 발생할 것 같은 소스코드
+    } catch (Exception ex) {
+        /* 모든 예외클래스의 조상은 Exception(예 IndexOutOfRangeException) 
+           어떤 예외클래스를 쓸지 모르면 무조건 Exception 클래스 사용하면 됨*/
+        Console.WriteLine(ex.Message);
+    } finally {
+        // 예외발생 유무에 상관없이 항상 실행
+    }
+    ```
+- 대리자와 이벤트
+    - 메서드 호출 시 매개변수 전달
+    - 대리자 호출 시 함수(메서드) 자체를 전달
+    - 이벤트 - 컴퓨터 내에서 발생하는 객체의 사건들
+    - delegate --> event
+    - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
+    - 익명 메서드 사용
+- TIP, C# 주석 중 영역을 Expend 또는 Collapse가능
+    ![region 주석](https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs002.png)
 
+
+
+
+## 3일차
+- 람다식
+    - 익명 메서드를 만드는 방식 중에 하나 - delegate, lambda expression
+    - 익명 메서드시 코딩량 줄여줌, 프로퍼티 사용시에도 코딩양이 줄어듬
+    - 익명 메서드 사용시 마다 대리자를 선언해야하기 때문에
+        - Func, Action을 MS에서 미리 만들어둠
+
+- LINQ(Lanuguage Integrated Query)
+    - C#에 통합된 데이터 질의 기능(DB SQL과 거의 동일)
+    - group by에 집계함수가 필수가 아닌 것 외에는 SQL가 거의 동일 
+    - 단, 키워드 사용순서 다른 것을 인지해야함 
+    - LINQ만 고집하면 안됨. 기존의 C# 로직을 사용해야 할 경우도...
+
+- 애트리뷰트
+    - 리플렉션 object.GetType();
+    - [obsolete("다음 버전 사용불가!")]
+
+- 파이썬 실행
+    - COM 객체 사용(dynamic 형식)
+    - IronPython 라이브러리 : Python을 C#에서 사용할 수 있도록 해주는 오픈소스 라이브러리
+    - NuGet Package : 파이썬 pip와 같은 라이브러리 관리툴
+    - 해당 프로젝트 종속성, 마우스 오른쪽 버튼 > NuGet Package 관리 
+        1. 파이썬 엔진, 스코프 객체, 설정경로 객체 생성
+        2. 해달 컴퓨터 파이썬 경로들 설정
+        3. 실행시킬 파이썬 파일 경로 지정
+        4. 파이썬 실행(scope 연결)
+        5. 파이썬 함수를 Func 또는 Action으로 매핑
+        6. 매핑시킨 메서드를 실행
+
+- 가비지 컬렉션
+    - C, C++은 메모리 사용시 개발자가 직접 메모리 해제 해야 함
+    - C#, Java, python 등의 객체지향 언어는 Garbage Collection(쓰레기 수집기) 기능으로 프로그램이 직접 관리
+    - C# 개발자는 메모리 관리에 아무것도 할게 없다!!
+
+- 윈폼 UI 개발 + 파일, 스레드
+    - 이벤트, 이벤트핸들러 (대리자, 이벤트 연결)
+    - 그래픽 사용자 인터페이스를 만드는 방법
+        1. Winforms(Windows Forms)
+        2. WPF(Windows Presentation Foundation)
+    - WYSIWYG(What You See Is What You Get) 방식의 GUI 프로그램 개발 
+
+## 4일차
 - WPF
+- 예제 프로젝트
