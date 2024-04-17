@@ -303,8 +303,8 @@
         - 가장 트렌드가 되는 작업 방법
         - 백그라운드 처리는 Thread, BackgroundWorker와 유사
         - async, await 키워드
-
-        ![비동기앱}(https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs004.png)
+        
+![비동기앱](https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs004.png)
 
 ## 6일차
 - 예제 프로젝트
