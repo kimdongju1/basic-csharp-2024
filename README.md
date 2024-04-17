@@ -296,14 +296,14 @@
     - 파일 입출력 추가
         - 리치텍스트박스(like MSWord, 한글워드)로 파일저장
         
-    <img src="https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs003.png" width=850> 
+        <img src="https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs003.png" width=850> 
 
     - 비동기 작업 앱 
         - 가장 트렌드가 되는 작업 방법
         - 백그라운드 처리는 Thread, BackgroundWorker와 유사
         - async, await 키워드
 
-    ![비동기앱](https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs004.png)
+        ![비동기앱](https://raw.githubusercontent.com/kimdongju1/basic-csharp-2024/main/images/cs004.png)
 
 ## 6일차
 - 예제 프로젝트
