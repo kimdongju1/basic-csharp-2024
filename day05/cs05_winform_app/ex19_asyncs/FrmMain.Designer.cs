@@ -160,6 +160,8 @@ namespace ex19_asyncs
             ClientSize = new Size(489, 194);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmMain";
             Text = "비동기 파일 복사";
             groupBox1.ResumeLayout(false);
