@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             MnsBookRental = new MenuStrip();
-            파일ToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem2ToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem3ToolStripMenuItem = new ToolStripMenuItem();
             StsBookRental = new StatusStrip();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             toolStripStatusLabel3 = new ToolStripStatusLabel();
@@ -43,30 +43,12 @@
             // 
             // MnsBookRental
             // 
-            MnsBookRental.Items.AddRange(new ToolStripItem[] { 파일ToolStripMenuItem, toolStripMenuItem2ToolStripMenuItem, toolStripMenuItem3ToolStripMenuItem });
+            MnsBookRental.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
             MnsBookRental.Location = new Point(0, 0);
             MnsBookRental.Name = "MnsBookRental";
             MnsBookRental.Size = new Size(800, 24);
-            MnsBookRental.TabIndex = 0;
+            MnsBookRental.TabIndex = 1;
             MnsBookRental.Text = "menuStrip1";
-            // 
-            // 파일ToolStripMenuItem
-            // 
-            파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
-            파일ToolStripMenuItem.Size = new Size(57, 20);
-            파일ToolStripMenuItem.Text = "파일(&F)";
-            // 
-            // toolStripMenuItem2ToolStripMenuItem
-            // 
-            toolStripMenuItem2ToolStripMenuItem.Name = "toolStripMenuItem2ToolStripMenuItem";
-            toolStripMenuItem2ToolStripMenuItem.Size = new Size(62, 20);
-            toolStripMenuItem2ToolStripMenuItem.Text = "관리(&M)";
-            // 
-            // toolStripMenuItem3ToolStripMenuItem
-            // 
-            toolStripMenuItem3ToolStripMenuItem.Name = "toolStripMenuItem3ToolStripMenuItem";
-            toolStripMenuItem3ToolStripMenuItem.Size = new Size(72, 20);
-            toolStripMenuItem3ToolStripMenuItem.Text = "도움말(&H)";
             // 
             // StsBookRental
             // 
@@ -74,8 +56,26 @@
             StsBookRental.Location = new Point(0, 428);
             StsBookRental.Name = "StsBookRental";
             StsBookRental.Size = new Size(800, 22);
-            StsBookRental.TabIndex = 1;
+            StsBookRental.TabIndex = 2;
             StsBookRental.Text = "statusStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(57, 20);
+            toolStripMenuItem1.Text = "파일(&F)";
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(62, 20);
+            toolStripMenuItem2.Text = "관리(&M)";
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(72, 20);
+            toolStripMenuItem3.Text = "도움말(&H)";
             // 
             // toolStripStatusLabel1
             // 
@@ -120,9 +120,9 @@
 
         private MenuStrip MnsBookRental;
         private StatusStrip StsBookRental;
-        private ToolStripMenuItem 파일ToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem2ToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem3ToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripStatusLabel toolStripStatusLabel3;

@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 74);
+            this.label1.Location = new System.Drawing.Point(49, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 12);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 101);
+            this.label2.Location = new System.Drawing.Point(61, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 1;
@@ -57,28 +57,26 @@
             // 
             // TxtUserId
             // 
-            this.TxtUserId.Location = new System.Drawing.Point(128, 71);
+            this.TxtUserId.Location = new System.Drawing.Point(124, 64);
             this.TxtUserId.Name = "TxtUserId";
-            this.TxtUserId.Size = new System.Drawing.Size(116, 21);
+            this.TxtUserId.Size = new System.Drawing.Size(122, 21);
             this.TxtUserId.TabIndex = 2;
-            this.TxtUserId.Text = "admin";
             this.TxtUserId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUserId_KeyPress);
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(128, 98);
+            this.TxtPassword.Location = new System.Drawing.Point(124, 100);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '●';
-            this.TxtPassword.Size = new System.Drawing.Size(116, 21);
+            this.TxtPassword.Size = new System.Drawing.Size(122, 21);
             this.TxtPassword.TabIndex = 3;
-            this.TxtPassword.Text = "admin";
             this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(55, 135);
+            this.BtnLogin.Location = new System.Drawing.Point(63, 127);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(92, 23);
+            this.BtnLogin.Size = new System.Drawing.Size(83, 30);
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "로그인";
             this.BtnLogin.UseVisualStyleBackColor = true;
@@ -86,9 +84,9 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(153, 135);
+            this.BtnCancel.Location = new System.Drawing.Point(152, 127);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(91, 23);
+            this.BtnCancel.Size = new System.Drawing.Size(75, 30);
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
