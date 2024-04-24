@@ -32,6 +32,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NudPrice = new System.Windows.Forms.NumericUpDown();
+            this.DtpRealeaseDate = new MetroFramework.Controls.MetroDateTime();
             this.CboDivision = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.TxtIsbn = new MetroFramework.Controls.MetroTextBox();
@@ -47,8 +49,6 @@
             this.TxtBookIdx = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.DtpRealeaseDate = new MetroFramework.Controls.MetroDateTime();
-            this.NudPrice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -114,6 +114,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책정보 입력항목";
             // 
+            // NudPrice
+            // 
+            this.NudPrice.Location = new System.Drawing.Point(116, 215);
+            this.NudPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.NudPrice.Name = "NudPrice";
+            this.NudPrice.Size = new System.Drawing.Size(218, 19);
+            this.NudPrice.TabIndex = 7;
+            // 
+            // DtpRealeaseDate
+            // 
+            this.DtpRealeaseDate.Location = new System.Drawing.Point(116, 150);
+            this.DtpRealeaseDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpRealeaseDate.Name = "DtpRealeaseDate";
+            this.DtpRealeaseDate.Size = new System.Drawing.Size(218, 29);
+            this.DtpRealeaseDate.TabIndex = 5;
+            // 
             // CboDivision
             // 
             this.CboDivision.FormattingEnabled = true;
@@ -152,7 +172,7 @@
             this.TxtIsbn.CustomButton.Visible = false;
             this.TxtIsbn.Lines = new string[0];
             this.TxtIsbn.Location = new System.Drawing.Point(116, 186);
-            this.TxtIsbn.MaxLength = 32767;
+            this.TxtIsbn.MaxLength = 13;
             this.TxtIsbn.Name = "TxtIsbn";
             this.TxtIsbn.PasswordChar = '\0';
             this.TxtIsbn.PromptText = "ISBN 입력";
@@ -167,6 +187,7 @@
             this.TxtIsbn.WaterMark = "ISBN 입력";
             this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIsbn_KeyPress);
             // 
             // metroLabel5
             // 
@@ -207,7 +228,7 @@
             this.TxtNames.MaxLength = 32767;
             this.TxtNames.Name = "TxtNames";
             this.TxtNames.PasswordChar = '\0';
-            this.TxtNames.PromptText = "구분명 입력";
+            this.TxtNames.PromptText = "책제목 입력";
             this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtNames.SelectedText = "";
             this.TxtNames.SelectionLength = 0;
@@ -216,7 +237,7 @@
             this.TxtNames.Size = new System.Drawing.Size(218, 23);
             this.TxtNames.TabIndex = 4;
             this.TxtNames.UseSelectable = true;
-            this.TxtNames.WaterMark = "구분명 입력";
+            this.TxtNames.WaterMark = "책제목 입력";
             this.TxtNames.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtNames.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -352,26 +373,6 @@
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "책순번";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // DtpRealeaseDate
-            // 
-            this.DtpRealeaseDate.Location = new System.Drawing.Point(116, 150);
-            this.DtpRealeaseDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DtpRealeaseDate.Name = "DtpRealeaseDate";
-            this.DtpRealeaseDate.Size = new System.Drawing.Size(218, 29);
-            this.DtpRealeaseDate.TabIndex = 5;
-            // 
-            // NudPrice
-            // 
-            this.NudPrice.Location = new System.Drawing.Point(116, 215);
-            this.NudPrice.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.NudPrice.Name = "NudPrice";
-            this.NudPrice.Size = new System.Drawing.Size(218, 19);
-            this.NudPrice.TabIndex = 7;
             // 
             // FrmBookInfo
             // 
